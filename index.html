@@ -39,40 +39,6 @@
             </button></div>
           </div>
     </model-viewer>
-    <script>
-          
-        // Show model
-        const modelViewer = document.querySelector("model-viewer");
-
-        // Upload model
-        window.addEventListener('load', function() {
-            document.querySelector('input[type="file"]').addEventListener('change', function() {
-                if (this.files && this.files[0]) {
-                    modelViewer.onload = () => {
-                        URL.revokeObjectURL(modelViewer.src);  // no longer needed, free memory
-                    }
-
-                    modelViewer.src = URL.createObjectURL(this.files[0]); // set src to blob url
-                }
-            });
-        });
-        // Size model
-        modelViewer.style.width = "100%"
-        modelViewer.style.height = "100vh"
-
-        // Choose model
-        window.switchSrc = (element, name) => {
-        modelViewer.src = `./glb/${name}.glb`
-        modelViewer.poster = `./slider/${name}.webp`;
-        const slides = document.querySelectorAll(".slide");
-        slides.forEach((element) => {element.classList.remove("selected");});
-        element.classList.add("selected");
-        };
-
-        document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
-        // Keep slider interactions from affecting the XR scene.
-        ev.preventDefault();
-        });
-    </script>
+   <script src="script.js"></script>
 </body>
 </html>
