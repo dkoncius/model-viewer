@@ -62,8 +62,8 @@
 
         // Choose model
         window.switchSrc = (element, name) => {
-        modelViewer.src = `/glb/${name}.glb`
-        modelViewer.poster = `/slider/${name}.webp`;
+        modelViewer.src = `./glb/${name}.glb`
+        modelViewer.poster = `./slider/${name}.webp`;
         const slides = document.querySelectorAll(".slide");
         slides.forEach((element) => {element.classList.remove("selected");});
         element.classList.add("selected");
