@@ -1,6 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const modelViewer = document.querySelector("model-viewer");
+const modelViewer = document.querySelector("model-viewer");
+ 
+ // Set modelViewer dimensions
+ modelViewer.style.width = "100%";
+ modelViewer.style.height = "100vh";
 
+document.addEventListener('DOMContentLoaded', () => {
     // Upload model functionality
     document.querySelector('input[type="file"]').addEventListener('change', function() {
         if (this.files && this.files[0]) {
@@ -10,10 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
             modelViewer.src = URL.createObjectURL(this.files[0]);
         }
     });
-
-    // Set modelViewer dimensions
-    modelViewer.style.width = "100%";
-    modelViewer.style.height = "100vh";
 
     // Choose model functionality
     window.switchSrc = (element, name) => {
