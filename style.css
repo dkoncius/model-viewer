@@ -66,6 +66,45 @@ model-viewer {
   transition: 0.3s;
 }
 
+#ar-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  bottom: 132px;
+  padding: 20px;
+  font-family: Roboto Regular, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  color:#4285f4;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 18px;
+  border: 1px solid #DADCE0;
+}
+
+
+#ar-button img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+#ar-button:active {
+  background-color: #E8EAED;
+}
+
+#ar-button:focus {
+  outline: none;
+}
+
+#ar-button:focus-visible {
+  outline: 1px solid #4285f4;
+}
+
 @keyframes circle {
   from { transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg); }
   to   { transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg); }
@@ -109,7 +148,7 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
   text-align: center;
   overflow: hidden;
   position: absolute;
-  bottom: 15px;
+  bottom: 16px;
 }
 
 .slides {
