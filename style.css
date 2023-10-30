@@ -119,7 +119,7 @@ model-viewer {
 model-viewer > #ar-prompt {
   position: absolute;
   left: 50%;
-  bottom: 175px;
+  bottom: 15px;
   animation: elongate 2s infinite ease-in-out alternate;
   display: none;
 }
@@ -136,7 +136,7 @@ model-viewer > #ar-failure {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 175px;
+  bottom: 15px;
   display: none;
 }
 
