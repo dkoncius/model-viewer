@@ -1,8 +1,15 @@
 const modelViewer = document.querySelector("model-viewer");
 
 // Set modelViewer dimensions
-modelViewer.style.width = "100%";
-modelViewer.style.height = "100vh";
+const updateModelViewerSize = () => {
+    modelViewer.style.height = window.innerHeight + 'px';
+  };
+  
+// Initial sizing
+updateModelViewerSize();
+
+// Update sizing when the window resizes
+window.addEventListener('resize', updateModelViewerSize);
 
 document.addEventListener('DOMContentLoaded', () => {
   // Upload model functionality

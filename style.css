@@ -62,7 +62,6 @@ model-viewer {
   position: fixed;
   top: 0;
   background-color: blueviolet;
-  overflow-x: hidden;
   transition: 0.3s;
 }
 
@@ -189,6 +188,10 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
 }
 
 @media (max-width: 500px){
+  model-viewer {
+    height: 80vh;
+  }
+
   .slides {
     justify-content: start;
   }
