@@ -75,7 +75,7 @@ model-viewer {
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  bottom: 15px;
+  bottom: 132px;
   padding: 20px;
   font-family: Roboto Regular, Helvetica Neue, sans-serif;
   font-size: 14px;
@@ -136,7 +136,7 @@ model-viewer > #ar-failure {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 15px;
+  bottom: 175px;
   display: none;
 }
 
@@ -197,10 +197,5 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
     left: 0;
     right: 0;
     margin: auto;
-  }
-
-  .slider {
-    bottom: 55px;
-    padding: 20px;
   }
 }
