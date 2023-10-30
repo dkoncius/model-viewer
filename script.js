@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     element.classList.add("selected");
   };
 
-  
   // Slider interaction
   document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
     ev.preventDefault();
